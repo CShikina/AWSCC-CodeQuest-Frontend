@@ -13,512 +13,553 @@
 *,
 *::after,
 *::before { 
-    /* padding: 0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif; */
+    font-family: 'Lato', sans-serif;
 }
 
 a {
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 
 ol, ul, li {
-    /* list-style: none; */
+    list-style: none;
 }
 
 html {
-    /* font-size: 62.5%; */
+    font-size: 62.5%;
 }
 
 html:focus-within {
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
   
 body {
-    /* min-height: 100vh;
+    min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5; */
+    line-height: 1.5;
 }
 
 img, picture {
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 article, aside, footer, header, nav, section {
-	/* display: block; */
+	display: block;
 }
 
 body {
-    /* background-color: #eee;
-    overflow-x: hidden; */
+    background-color: #eee;
+    overflow-x: hidden;
 }
 
 /* Navigation Styling */
-
-/* Step 1: Navigation Bar Styles */
 nav {
-    /* display: ;
-    justify-content: ;
-    align-items: ;
-    flex-wrap: ;
-    flex-direction: ;
-    margin: ; 
-    height: ;
-    position: ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 3px;
+    margin-bottom: 21px;
+    height: 20px;
+    position: static; 
 }
 
-/* Step 2: Navigation Text Styles */
 nav p {
-    /* font-size: ;
-    font-weight: ;
-    color: ;
-    cursor: ;
-    transition: ; */
+    font-size: 20px;
+    align-items: center;
+    margin-left: 25px;
+    font-weight: 900;
+    color: black;
+    cursor: default;
+    transition: font-size 0.2s;
+    transition-timing-function: ease; 
 }
 
-/* Step 3: Navigation Span Styles */
+nav p:hover{
+    font-size:21px;
+}
+
 nav p span {
-    /* color: ;
-    transition: ; */
+    color: green;
+    transition: none;
 }
 
-/* Step 4: Navigation List Styles */
 nav ul {
-    /* display: ;
-    gap: ;
-    font-size: ;
-    z-index: ; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 25px;
+    gap: 0px 10px;
+    font-size: 12.5px;
+    text-align: center;
+    z-index: auto;
 }
 
-/* Step 5: Navigation List Item Styles */
 nav ul li {
-    /* border: ;
-    padding: ;
-    border-radius: ;
-    cursor: ;
-    transition: ; */
+    border: hidden;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: border, color, background-color, border-radius;
+    transition-timing-function: ease-in;
 }
 
-/* Step 6: Navigation List Item Hover Styles */
 nav ul li:hover {
-    /* border: ;
-    border-radius: ;
-    transition: ; */
+    border: hidden;
+    font-weight: 700;
+    background-color: #9ddd7e;
+    border-radius: 30px;
 }
 
-/* Step 7: Navigation List Item Anchor Styles */
-nav ul li a {
-    /* color: ;
-    font-weight: ;
-    transition: ; */
-}
-
-/* Step 8: Navigation List Item Anchor Hover Styles */
-nav ul li:hover > a {
-    /* color: ;
-    transition: ; */
-}
 
 /* Step 9: Responsive Styles for Navigation */
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 425px) {
     nav {
-        /* margin: ; */
+        justify-content: space-between;
     }
+
+    nav p {
+        margin-left: 3px;
+    }
+
+    nav ul {
+        gap: 0px 5px;
+    }
+
+    nav ul li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }   
 }
 
-/* Step 10: Responsive Styles for Hidden Navigation on Small Screens */
-@media only screen and (max-width: 700px) {
-    nav ul {
-        /* display: ; */
+@media only screen and (max-width: 375px){
+    nav {
+        justify-content: center;
+        padding-bottom:43px;
     }
 }
 
 /* Slider Section Styling */
-
-/* Step 1: Section Styles */
 section {
-    /* position: ;
-    background-color: ;
-    height: ; */
+    position: static;
+    background-color: green;
+    height: 180px;
 }
 
-/* Step 2: Content Styles */
 .content {
-    /* position: ;
-    left: ;
-    top: ;
-    transform: ;
-    text-align: ;
-    color: ;
-    width: ; */
+    display:flex;
+    height: 180px;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-/* Step 3: Heading Styles */
-.content h2 {
-    /* font-size: ; */
+.content h1 {
+    font-size: 38px;
 }
 
-/* Step 4: Paragraph Styles */
 .content p {
-    /* font-size: ; */
+    padding-top: 3px;
+    padding-top: 3px;
+    font-size: 15px;
 }
 
-/* Step 5: Responsive Styles */
-@media only screen and (max-width: 945px) {
-    .content h2 {
-        /* font-size: ; */
+@media only screen and (max-width: 425px) {
+    .content h1 {
+        font-size: 35px;
     }
     
     .content p {
-        /* font-size: ; */
-    }
-}
-
-@media only screen and (max-width: 680px) {
-    .content h2 {
-        /* font-size: ; */
-    }
-    
-    .content p {
-        /* font-size: ; */
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    .content h2 {
-        /* font-size: ; */
-    }
-    
-    .content p {
-        /* display: ; */
+        font-size: 12px;
     }
 }
 
 /* Main Content Section Styling */
-
-/* Step 1: Main Content Container Styles */
-.main-content {
-    /* display: ;
-    align-items: ;
-    flex-direction: ;
-    text-align: ;
-    margin: ;
-    gap: ; */
+main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    text-align: left;
+    margin: 20px 80px;      
+    gap: 0px 50px;          
 }
 
-@media only screen and (max-width: 1124px) {
-    .main-content {
-        /* margin: ; */
-    }
+.posts {
+    display: flex;
+    flex-direction: column;
+    height: 900px;              
+    width: 850px;
+    justify-content: space-between;
+
 }
 
-/* Step 2: Blog Section Styles */
-.blog {
-    /* flex: ; */
-}
-
-/* Step 3: Sidebar Section Styles */
-.sidebar {
-    /* flex: ; */
-}
-
-/* Step 4: Post Styles */
 .post {
-    /* display: ;
-    background-color: ;
-    box-shadow: ;
-    margin-bottom: ;
-    position: ;
-    min-height: ; */
+    display: grid;
+    grid-template-columns: 400px 1fr;       
+    grid-template-rows: 270px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(209, 209, 209);
+    position: static;
 }
 
-/* Step 5: Post Image Styles */
 .post-image {
-    /* min-height: ;
-    transition: ;
-    overflow: ; */
+    overflow: hidden;  
 }
 
-/* Step 6: Hover Effect on Post Image */
-.post:hover .post-image img {
-    /* transform: ;
-    transition: ; */
-}
-
-/* Step 7: Post Image Inner Styles */
 .post-image img {
-    /* height: ;
-    transition: ;
-    object-fit: ; */
+    height: 270px;
+    width: fit-content;
+    object-fit: cover; 
 }
 
-/* Step 8: Post Content Styles */
 .post-content {
-    /* padding: ;
-    text-align: ;
-    display: ;
-    flex-direction: ;
-    flex-wrap: ;
-    justify-content: ; */
+    padding: 20px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
 }
 
-/* Step 9: Post Title Styles */
 .post-title {
-    /* color: ;
-    font-size: ;
-    font-weight: ;
-    cursor: ; */
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: text;
 }
 
-/* Step 10: Post Info Styles */
 .post-info {
-    /* text-align: ;
-    padding: ;
-    color: ;
-    font-size: ; */
+    text-align: start;
+    padding: 15px 0px 15px 0px;
+    color: black;
+    font-size: 16px;
 }
 
-/* Step 11: Post Summary Styles */
 .post-summary {
-    /* line-height: ;
-    color: ;
-    font-size: ; */
+    line-height: 1.6;
+    color: rgb(56, 56, 56);
+    font-size: 14px;
 }
 
-/* Step 12: Responsive Styles */
-@media only screen and (max-width: 992px) {
-    .main-content {
-        /* flex-direction: ; */
-    }
-}
-
-/* Step 13: Responsive Styles for Posts */
-@media only screen and (max-width: 500px) {
-    .main-content {
-        /* margin: ; */
+@media only screen and (max-width: 1024px) {
+    main {
+        margin: 20px 60px;
+        gap: 0px 25px;
     }
 
+    .posts {
+        height: 900px;
+        width: 700px;
+    }
     .post {
-        /* flex-direction: ; */
+        grid-template-columns: 300px 400px;
+        grid-template-rows: 270px;
+    }  
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 20px 35px;
+        gap: 0px 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .posts {
+        height: 730px;
+        width: 550px;
+        
+    }
+    .post {
+        grid-template-columns: 180px 400px;
+        grid-template-rows: 180px;
+    }
+
+    .post-content {
+        padding: 10px;
+    }
+
+    .post-title {
+        padding-right: 40px;
+        font-size: 15px;
+    }
+    
+    .post-info {
+        padding: 5px 0px 5px 0px;
+        font-size: 14px;
+    }
+    
+    .post-summary {
+        font-size: 11px;
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    main {
+        flex-direction: column;
+        margin: 15px 15px;
+        gap: 25px 0px;
+    }
+
+    .posts {
+        height: 700px;
+        width: 400px;
+    }
+    .post {
+        grid-template-columns: 100px 2fr; 
+        grid-template-rows: 180px;
+    }
+
+    .post-content {
+        padding: 10px;
+    }
+
+    .post-title {
+        padding-right: 0px;
+        font-size: 13px;
+    }
+
+    .post-info {
+        font-size: 12px;
+    }
+    
+    .post-summary {
+        font-size: 11px;
+        padding-right: 0px;
     }
 }
 
 /* Sidebar Styling */
-
-/* Step 1: Sidebar Container Styles */
 .sidebar {
-    /* text-align: ;
-    display: ;
-    flex-direction: ;
-    flex-wrap: ;
-    align-items: ;
-    align-content: ; */
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: space-between;
 }
 
-/* Step 2: Popular Posts Container Styles */
 .popular-posts-side {
-    /* margin: ;
-    width: ; */
+    margin:0px 0 20px 0;
+    width: 330px;
 }
 
-/* Step 3: Popular Posts Heading Styles */
 .popular-posts-side h2, .social-side h2 {
-    /* font-size: ;
-    color: ;
-    font-weight: ;
-    padding-bottom: ;
-    padding-top: ; */
+    font-size: 16px;
+    color: rgb(167, 167, 167);
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 15px;
 }
 
-/* Step 4: Popular Post Styles */
 .popular-post {
-    /* position: ;
-    background-color: ;
-    margin-bottom: ;
-    box-shadow: ;
-    display: ;
-    align-items: ;
-    flex-wrap: ;
-    flex-direction: ;
-    align-content: ;
-    padding: ;
-    gap: ;
-    transition: ; */
+    position: relative;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 10px rgb(209, 209, 209);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: space-between;
+    padding: 5px;
+    gap: 0px 10px;
+    transition: margin-left margin-right;
 }
 
-/* Step 5: Popular Post Hover Styles */
 .popular-post:hover {
-    /* margin-left: ;
-    margin-right: ;
-    transition: ; */
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-/* Step 6: Popular Post Image Styles */
 .popular-post-image {
-    /* width: ;
-    height: ; */
+    width: 35px;
+    height: 35px;
 }
 
-/* Step 7: Popular Post Image Hover Styles */
 .popular-post-image img {
-    /* min-width: ;
-    min-height: ;
-    object-fit: ; */
+    min-width: 35;
+    min-height: 35;
+    object-fit: cover;
 }
 
-/* Step 8: Popular Post Title Styles */
 .popular-post-title {
-    /* font-size: ;
-    color: ;
-    font-weight: ; */
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
 }
 
-/* Step 9: Popular Post Description Styles */
 .popular-post-desc {
-    /* font-size: ;
-    color: ; */
+    font-size: 11.5px;
+    color: rgb(27, 27, 27);
 }
 
-/* Step 10: Responsive Styles for Popular Posts Container */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1024px) {
     .popular-posts-side {
-        /* margin: ; */
+        margin:0px 0 5px 0;
+        width: 230px;
     }
 
+    .popular-post-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .popular-post-image img {
+        min-width: 50px;
+        min-height: 50px;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     .sidebar {
-        /* flex-direction: ; */
+        flex-direction: row;
+        align-content: space-between;
+        gap: 50px;
     }
 }
 
-/* Step 11: Social Side Container Styles */
+@media only screen and (max-width: 425px){
+    .sidebar {
+        gap: 10px;
+    }
+}
+
 .social-side {
-    /* margin: ;
-    width: ; */
+    margin:0px 0 20px 0;
+    width: 330px;
 }
 
-/* Step 12: Social Side Box Styles */
 .social-side div {
-    /* display: ;
-    padding: ;
-    box-shadow: ;
-    background: ;
-    border-radius: ;
-    gap: ;
-    justify-content: ; */
+    display: flex;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgb(209, 209, 209);
+    background: white;
+    border-radius: 5px;
+    gap: 15px;
+    justify-content: center;
 }
 
-/* Step 13: Social Side Link Styles */
 .social-side div a {
-    /* max-width: ;
-    transition: ; */
+    max-width: 50px;
+    transition: border-radius filter;
 }
 
-/* Step 14: Social Side Link Hover Styles */
 .social-side div a:hover img {
-    /* border-radius: ;
-    filter: ;
-    transition: ; */
+    border-radius: 9px;
+    filter: drop-shadow(2px 2px 10px rgb(209, 209, 209));
 }
 
-/* Step 15: Footer Splitter Styles */
-@media only screen and (max-width: 992px) {
-  .sidebar {
-        /* flex-direction: ; */
+@media only screen and (max-width: 1024px) {
+    .social-side {
+        width: 150px;
+        margin:0px 0px 3px 0px;
     }
 
-    .popular-posts-side {
-        /* flex: ; */
+    .social-side div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-side div a {
+        max-width: 100px;
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .social-side {
+        width: 250px;
+        margin:0px 0px 3px 0px;
+    }
+
+    .social-side div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .social-side {
+        width: 130px;
+        padding: 2px 2px 2px 2px;
+    }
+
+    .social-side div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .social-side div a {
+        max-width: 40px;
+    }
+}
 
 /* Footer Styling */
-
-/* Step 1: Footer Container Styles */
-.container footer {
-    /* background-color: ;
-    color: ; */
+footer {
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
 }
 
-/* Step 2: Footer Boxes Container Styles */
-.container footer .footerBoxes {
-    /* display: ;
-    flex-direction: ;
-    align-content: ;
-    justify-content: ;
-    align-items: ;
-    gap: ;
-    padding: ; */
+footer .footerBoxes {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 35px 50px 0px 50px;
 }
 
-/* Step 3: Responsive Styles for Footer Boxes Container */
-@media only screen and (max-width: 1000px) {
-    .container footer .footerBoxes {
-        /* padding: ; */
-    }
+footer .footerBoxes .footerBox {
+    flex-direction: column;
+    text-align: start;
 }
 
-/* Step 4: Responsive Styles for Footer Boxes Container (Mobile) */
-@media only screen and (max-width: 600px) {
-    .container footer .footerBoxes {
-        /* flex-direction: ; */
-    }
+footer .footerBoxes .footerBox h3 {
+    color: whitesmoke;
+    font-size: 16.5px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    padding-bottom: 5px;
 }
 
-/* Step 5: Footer Box Styles */
-.container footer .footerBoxes .footerBox {
-    /* flex: ;
-    text-align: ; */
+footer .footerBoxes .footerBox hr {
+    height: px;
+    width: 40px;
+    background: rgb(148, 148, 148);
+    border: 1px solid rgb(70, 69, 69);
+    margin-bottom: 8px;
 }
 
-/* Step 6: Footer Box Heading Styles */
-.container footer .footerBoxes .footerBox h3 {
-    /* color: ;
-    font-size: ;
-    font-weight: ;
-    letter-spacing: ;
-    padding-bottom: ; */
+footer .footerBoxes .footerBox p {
+    font-size: 13px;
+    color: rgb(70, 69, 69);
 }
 
-/* Step 7: Footer Box Divider Styles */
-.container footer .footerBoxes .footerBox hr {
-    /* height: ;
-    width: ;
-    background: ;
-    border: ;
-    margin-bottom: ; */
+footer .splitter {
+    align-items: center;
+    height: 0px;
+    margin: 30px 25px 5px 25px;
+    background: none;
+    border: 1px solid rgb(94, 92, 92);
 }
 
-/* Step 8: Footer Box Text Styles */
-.container footer .footerBoxes .footerBox p {
-    /* font-size: ;
-    color: ; */
-}
-
-/* Step 9: Footer Splitter Styles */
-.container footer .splitter {
-    /* height: ;
-    width: ;
-    margin: ;
-    background: ;
-    border: ;
-    margin-bottom: ; */
-}
-
-/* Step 10: Copy-Right Text Styles */
 .copy-right {
-    /* font-size: ;
-    width: ;
-    text-align: ;
-    opacity: ;
-    padding: ; */
+    align-items: center;
+    font-size: 13.5px;
+    text-align: center;
+    opacity: 70%;
+    padding: 10px;
 }
-
-/* Responsive Design */
-
-/* Add your own responsive design styles here */
-
-/* Additional Tips */
-
-/* Add any additional styling tips here */
