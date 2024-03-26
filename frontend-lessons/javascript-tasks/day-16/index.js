@@ -37,7 +37,3 @@ console.log(`Sum = ${addNumbers(5, 4)}`);
 //print result of calculateAverage function
 let nums = [2, 4, 6, 8, 15];
 console.log(`Average = ${calculateAverage(nums)}`);
-
-
-
-
