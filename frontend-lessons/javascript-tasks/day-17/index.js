@@ -33,3 +33,46 @@
 // 17. Use the `splice()` method to remove three characters starting from index 4 of the `characters` array.
 
 // These tasks will help you strengthen your understanding of working with arrays in JavaScript. Arrays are powerful tools for managing and manipulating collections of data. Good luck! 🚀
+
+//task 1
+let cities = ['paris', 'cairo', 'venice', 'berlin', 'milan'];
+console.log(cities);
+console.log(`Third city is ${cities[2]}`);
+cities.splice(1, 1, 'barcelona');
+console.log(cities);
+
+//task 2
+let fruits = ['apple', 'orange', 'mango'];
+fruits.push('strawberry');
+fruits.pop();
+for(let i=0; i<fruits.length; i++){
+    console.log(fruits[i]);
+}
+
+//task 3
+let numbers = [2, 4, 6, 8, 10];
+let numbersDoubled = numbers.map(function(numbers){
+    return numbers *2;
+})
+let greaterThan5 = numbers.filter(function(numbers){
+    return numbers > 5;
+})
+console.log(numbers);
+console.log(numbersDoubled);
+console.log(greaterThan5);
+
+//task 4
+let colors = ['pink', 'red', 'yellow', 'green'];
+colors.unshift('purple');
+colors.shift();
+let newGroup = colors.slice(1, 3);
+console.log(colors);
+console.log(newGroup);
+
+//task 5
+let characters = ['Pam', 'Jim', 'Michael', 'Dwight', 'Angela', 'Kevin']
+console.log(characters);
+characters.splice(2, 0, 'Kelly', 'Stanley');
+console.log(characters);
+characters.splice(4, 3);
+console.log(characters);
