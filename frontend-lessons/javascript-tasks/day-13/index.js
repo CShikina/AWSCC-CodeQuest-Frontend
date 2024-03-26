@@ -4,6 +4,8 @@
 
 // 1. Declare a variable named `currentLesson` and assign it the value 'JavaScript Fundamentals'.
 // 2. Print the value of `currentLesson` to the console.
+let currentLesson = 'JavaScript Fundamentals';
+console.log(currentLesson);
 
 // Task 2: Data Types Exploration
 
@@ -14,8 +16,19 @@
 // 7. Create a variable named `undefinedVar` without assigning any value to it.
 
 // Task 3: Logical Operators in Action
+let favoriteNumber = 6;
+let favoriteWord = 'sleep';
+let isJavaScriptFun = true;
+let nothing = null;
+let undefinedVar;
 
 // 8. Create two variables, `isMorning` and `isRaining`, and assign them boolean values.
 // 9. Use the logical **AND** (`&&`) operator to check if it's morning and raining. Print appropriate messages based on the result.
 // 10. Use the logical **OR** (`||`) operator to check if it's either morning or raining. Print appropriate messages based on the result.
 // 11. Use the logical **NOT** (`!`) operator to invert the value of `isMorning`. Print the new value.
+
+let isMorning = true;
+let isRaining = false;
+console.log(isMorning && isRaining);
+console.log(isMorning || isRaining);
+console.log(!isMorning);
