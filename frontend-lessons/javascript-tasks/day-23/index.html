@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+    <button id="doubleClickButton">Double Click Me</button>
+    <button id="mouseenterButton">Hover Me</button>
+    <label for="'myInput">Type something:</label>
+    <input type="text" id="myInput">
+    
+    <script>
+        //single click
+        const myButton = document.getElementById('myButton');
+        myButton.addEventListener('click', onClick);
+
+        function onClick(){
+            alert('Button clicked!');
+        }
+
+        //double click
+        const doubleClick = document.getElementById('doubleClickButton');
+        doubleClick.addEventListener('dblclick', onDoubleClick);
+
+        function onDoubleClick(){
+            alert('Button double-clicked!');
+        }
+
+        //mouse enter function
+        const mouseEnter = document.getElementById('mouseenterButton');
+        mouseEnter.addEventListener('mouseenter', onMouseEnter);
+
+        function onMouseEnter(){
+            mouseEnter.style.backgroundColor = 'red';
+        }
+
+        //keypress
+        const inputElement = document.getElementById('myInput');
+        inputElement.addEventListener('keypress', onKeyPress);
+
+        function onKeyPress(){
+            console.log('Keypress event:', event.key);
+        }
+
+    </script>
+</body>
+</html>
