@@ -1,20 +1,28 @@
-// Working with JSON in JavaScript - Day 19: Assignment
 
-// Task 1: JavaScript to JSON
+//Task 1: JavaScript to JSON
+const product = {
+    name: 'Sunscreen',
+    price: 300,
+    quantity: 2,
+};
+const productJSON = JSON.stringify(product);
+console.log(productJSON);
 
-// 1. Create a JavaScript object named `product` with properties for `name`, `price`, and `quantity`.
-// 2. Use the `JSON.stringify()` method to convert the `product` object into a JSON string.
-// 3. Print the resulting JSON string to the console.
+//Task 2: JSON to JavaScript
+const bookJSON = '{"title":"The Hunger Games", "author": "Suzanne Collins", "publishedYear": 2008}';
+book = JSON.parse(bookJSON);
+console.log(book.author)
 
-// Task 2: JSON to JavaScript
+//Task 3: Advanced JSON Operations
+const person = [
+    {name: 'John', age: 24, city: 'Manila'},
+    {name: 'Dale', age: 20, city: 'Chicago'},
+    {name: 'Angela', age: 23, city: 'New York'}
+];
 
-// 4. Create a JSON string representing a book with properties for `title`, `author`, and `publishedYear`.
-// 5. Use the `JSON.parse()` method to convert the JSON string into a JavaScript object.
-// 6. Access and print the `author` property of the resulting JavaScript object.
+const personJSON = JSON.stringify(person);
+const personArray = JSON.parse(personJSON);
 
-// Task 3: Advanced JSON Operations
-
-// 7. Create an array of objects, each representing a person with properties for `name`, `age`, and `city`.
-// 8. Use `JSON.stringify()` to convert the array of objects into a JSON string.
-// 9. Use `JSON.parse()` to convert the JSON string back into an array of objects.
-// 10. Print the `name` and `city` of each person in the array to the console.
+personArray.forEach(person => {
+    console.log(`Name: ${person.name}\tCity: ${person.city}`)
+});
